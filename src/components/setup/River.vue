@@ -4,10 +4,19 @@
       <v-img :src="require('@/assets/River/Tile_A.jpg')"
         class="shrink mr-2" transition="scale-transition"
         width="40" contain/>
-      De Rivier
+      The Rivers
+      <v-img :src="require('@/assets/River/Symbol_light.png')"
+        class="shrink mx-2" transition="scale-transition"
+        width="40" contain/>
+      <v-img :src="require('@/assets/River2/Symbol_light.png')"
+        class="shrink mr-2" transition="scale-transition"
+        width="40" contain/>
+      <v-img :src="require('@/assets/RiverAE/Symbol_light.png')"
+        class="shrink mr-2" transition="scale-transition"
+        width="40" contain/>
     </v-expansion-panel-header>
     <v-expansion-panel-content>
-      Shake the sources, lakes and river tiles separately then place one of the sources and put all lakes on the bottom of the river tiles
+      Pick on of the sources, then shake the lakes and river tiles separately and put all river tiles on top of the lakes. During the game players will first draw from the river stack untill the river is complete.
     </v-expansion-panel-content>
   </v-expansion-panel>
 </template>

@@ -6,12 +6,12 @@
         contain
         :src="require('@/assets/City/Tile_A.jpg')"
         width="40"/>
-      De Stad Carcasonne
+      The city of Carcasonne
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <ul>
-        <li>Beide helften worden door een speler op een passende plaats aangelegt</li>
-        <li>De active speler zet de graaf op een district naar keuze</li>
+        <li>The city of Carcassone is placed so its features connect.</li>
+        <li>The active player places the count on the city hall</li>
       </ul>
     </v-expansion-panel-content>
   </v-expansion-panel>

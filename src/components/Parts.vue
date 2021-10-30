@@ -3,6 +3,8 @@
     <v-expansion-panels>
       <v-subheader>Base Game</v-subheader>
       <GameParts v-for="game, i in basegame" :key="'b'+i" :game="game"/>
+      <v-subheader>River</v-subheader>
+      <GameParts v-for="game, i in rivers" :key="'r'+i" :game="game"/>
       <v-subheader>Big Box Expansions</v-subheader>
       <GameParts v-for="game, i in bigbox" :key="'i'+i" :game="game"/>
       <v-subheader>Main Expansions</v-subheader>
@@ -35,7 +37,7 @@ export default {
             2,3,3,3,
             2,3,2,3,
             1,3,2,1,
-            8,9,4,1],
+            8,9,4],
         },
         meeples: [
           {image: "Figure_Meeples_Base.png", amount: 8},
@@ -47,10 +49,28 @@ export default {
           {image: "Figure_Abbots_Base.png", amount: 1},
         ],
       },
-      {name: "The River",
-        path: "River",
+      {name: "20th Anniversary Edition",
+        path: "Anniversary",
         tiles: {
-          unique: 12,
+          total: 72,
+          unique: 24,
+          amount: [
+            2,4,1,4,
+            5,2,1,3,
+            2,3,3,3,
+            2,3,2,3,
+            1,3,2,1,
+            8,9,4],
+        },
+        meeples: [
+          {image: "Figure_Meeples_Base.png", amount: 8},
+          {image: "Figure_Abbots_Base.png", amount: 1},
+        ],
+      },
+      {name: "20th Anniversary Expansion",
+        path: "Arrows",
+        tiles: {
+          unique: 15,
         },
       },
       {name: "The Wheel of Fortune",
@@ -59,19 +79,42 @@ export default {
           total: 72,
           unique: 34,
           amount: [
-            1,2,1,1,2,
-            1,2,2,2,1,
-            1,2,2,2,2,
-            1,4,1,1,2,
-            4,2,1,7,1,
-            8,4,1,1],
+            1,2,1,1,
+            2,1,2,2,
+            2,1,1,2,
+            2,2,2,1,
+            4,1,1,2,
+            4,2,1,7,
+            1,8,4],
         },
-        peices: [
+        pieces: [
           {image: "Figure_BigPinkPig.png", amount: 1},
         ],
         meeples: [
           {image: "Figure_Meeples_Base.png", amount: 8},
         ],
+      },
+    ],
+    rivers: [
+      {name: "The River",
+        path: "River",
+        tiles: {
+          unique: 12,
+        },
+      },
+      {name: "20th Anniversary River",
+        path: "RiverAE",
+        tiles: {
+          total: 18,
+          unique: 17,
+          size: {16:2},
+        },
+      },
+      {name: "River II",
+        path: "River2",
+        tiles: {
+          unique: 12,
+        },
       },
     ],
     bigbox: [
@@ -80,9 +123,9 @@ export default {
         tiles: {
           total: 8,
           unique: 3,
-          amount: [3,4,1],
+          amount: [3,4],
         },
-        peices: [
+        pieces: [
           {image: "Figure_Ferry.png", amount: 8},
         ],
       },
@@ -91,8 +134,8 @@ export default {
         tiles: {
           unique: 8,
         },
-        peices: [
-          {image: "Figure_Die.png", amount: 8},
+        pieces: [
+          {image: "Figure_Die.png", amount: 1},
         ],
       },
       {name: "The Messages",
@@ -108,11 +151,11 @@ export default {
       {name: "The Goldmines",
         path: "Goldmine",
         tiles: {
-          unique: 8,
+          total: 8,
+          unique: 9,
         },
-        peices: [
+        pieces: [
           {image: "Figure_Gold.png", amount: 1},
-          {image: "Scoring_Token.png", amount: 1},
         ],
       },
       {name: "Mage and Witch",
@@ -120,7 +163,7 @@ export default {
         tiles: {
           unique: 8,
         },
-        peices: [
+        pieces: [
           {image: "Figure_Mage.png", amount: 1},
           {image: "Figure_Witch.png", amount: 1},
         ],
@@ -147,9 +190,9 @@ export default {
         tiles: {
           total: 18,
           unique: 17,
-          amount: [1,1,1,1,1,1,1,1,1,1,2],
+          amount: {10:2},
         },
-        peices: [
+        pieces: [
           {image: "Figure_Abbot_pink.png", amount: 1},
         ],
         meeples: [
@@ -172,9 +215,9 @@ export default {
         tiles: {
           total: 30,
           unique: 29,
-          amount: [1,1,1,1,1,1,2],
+          amount: {6:2},
         },
-        peices: [
+        pieces: [
           {image: "Figure_Dragon.png", amount: 1},
           {image: "Figure_Fairy.png", amount: 1},
         ],
@@ -184,9 +227,9 @@ export default {
         tiles: {
           total: 18,
           unique: 17,
-          amount: [1,1,1,1,1,1,1,1,1,1,2],
+          amount: {10:2},
         },
-        peices: [
+        pieces: [
           {image: "Figure_Tower.png", amount: 30},
         ],
       },
@@ -202,13 +245,6 @@ export default {
           {image: "Figure_Barns.png", amount: 1},
           {image: "Figure_Wagons.png", amount: 1},
         ],
-      },
-      {name: "Count, King and Robber",
-        sub: "- River II",
-        path: "River2",
-        tiles: {
-          unique: 12,
-        },
       },
       {name: "Count, King and Robber",
         sub: "- Heretics",
@@ -233,7 +269,7 @@ export default {
           total: 12,
           unique: 2,
         },
-        peices: [
+        pieces: [
           {image: "Figure_Count.png", amount: 1},
         ],
       },
@@ -242,9 +278,9 @@ export default {
         tiles: {
           total: 12,
           unique: 11,
-          amount: [1,1,1,2],
+          amount: {3:2},
         },
-        peices: [
+        pieces: [
           {image: "Figure_Bridge.png", amount: 12},
           {image: "Token_Castle_C2.png", amount: 12},
         ],
@@ -254,9 +290,11 @@ export default {
         tiles: {
           total: 18,
           unique: 16,
-          amount: [1,1,1,1,1,1,1,1,1,1,2,2],
+          amount: {
+            10:2,
+            11:2},
         },
-        peices: [
+        pieces: [
           {image: "Token_HillsSheep_Sheep1_C2.png", amount: 4},
           {image: "Token_HillsSheep_Sheep2_C2.png", amount: 5},
           {image: "Token_HillsSheep_Sheep3_C2.png", amount: 5},
@@ -269,9 +307,11 @@ export default {
         tiles: {
           total: 18,
           unique: 16,
-          amount: [1,1,1,1,1,1,1,1,1,1,2,2],
+          amount: {
+            10:2,
+            11:2},
         },
-        peices: [
+        pieces: [
           {image: "Figure_Roundtop.png", amount: 1},
           {image: "Token_UnderTheBigTop_Flea_C2.png", amount: 1},
           {image: "Token_UnderTheBigTop_Monkey_C2.png", amount: 4},
@@ -332,7 +372,7 @@ export default {
         tiles: {
           unique: 10,
         },
-        peices: [
+        pieces: [
           {image: "Token_Tollkeeper_pink.png", amount: 1},
           {image: "Token_Tollkeeper_blue.png", amount: 1},
           {image: "Token_Tollkeeper_green.png", amount: 1},
@@ -360,6 +400,14 @@ export default {
         tiles: {
           unique: 6,
         },
+        pieces: [
+          {image: "Token_apple.png", amount: 4},
+          {image: "Token_apricot.png", amount: 4},
+          {image: "Token_cherry.png", amount: 4},
+          {image: "Token_elder.png", amount: 4},
+          {image: "Token_plum.png", amount: 4},
+          {image: "Token_quince.png", amount: 4},
+        ]
       },
       {name: "The Bathhouses",
         path: "Bathhouse",
@@ -384,16 +432,6 @@ export default {
   //computed: {},
   //methods: {},
   //watch: {},
-  //beforeCreate() {},
-  //beforeMount() {},
-  //beforeUpdate() {},
-  //beforeDestroy() {},
-  //created() {},
-  //mounted() {},
-  //updated() {},
-  //destroyed() {},
-  //activated() {},
-  //deactivated() {},
 }
 </script>
 

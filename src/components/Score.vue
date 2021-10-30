@@ -5,9 +5,9 @@
     </div>
     <v-expansion-panels inset>
       <v-subheader>Base Projects</v-subheader>
-      <road/>
-      <city/>
-      <mona/>
+      <Road/>
+      <City/>
+      <Monastic/>
       <v-subheader>Cathedrals and Castles</v-subheader>
       <v-subheader>Expansions</v-subheader>
     </v-expansion-panels>
@@ -17,14 +17,14 @@
 <script>
 import Road from './score/Road.vue'
 import City from './score/City.vue'
-import Mona from './score/Mona.vue'
+import Monastic from './score/Monastic.vue'
 
 export default {
   name: 'score',
   components: {
     Road,
     City,
-    Mona,
+    Monastic,
   },
   //props: {},
   //data: ()=>({}),

@@ -11,6 +11,7 @@
       <ul>
         <li>1 points per tile</li>
         <li>+3 points per vineyard</li>
+        <li>+3 points if the fairy is on the monastery</li>
         <li>+1 points per tile when a the mage is on the monastery</li>
       </ul>
     </v-expansion-panel-content>
@@ -21,7 +22,7 @@
 //import Empty from './Empty.vue'
 
 export default {
-  name: 'mona',
+  name: 'monastic',
   //components: {},
   //props: {},
   //data: ()=>({}),

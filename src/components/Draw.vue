@@ -5,14 +5,14 @@
     </div>
     <v-expansion-panels inset>
       <v-subheader>The River</v-subheader>
-      <river/>
+      <River/>
       <v-subheader>Regular & Variant Tiles</v-subheader>
-      <half/>
-      <abbey/>
-      <castle/>
+      <Half/>
+      <Abbey/>
+      <Castle/>
       <v-subheader>Expanstions</v-subheader>
-      <city/>
-      <wheel/>
+      <City/>
+      <Wheel/>
     </v-expansion-panels>
   </v-tab-item>
 </template>

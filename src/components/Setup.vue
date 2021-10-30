@@ -1,13 +1,14 @@
 <template>
   <v-tab-item class="pt-2">
     <div class="ma-2">
-      Eerst kiest men wat voor tegel deze beurt gelegt gaat worden, als met de rivier gespeelt word dan moet eerst de rivier afgebouwt worden
+      <v-subheader>Pick Expansions</v-subheader>
+      Pick which expansions you want to play and execute the steps below for each of them
     </div>
     <v-expansion-panels inset>
-      <river/>
-      <half/>
-      <abbey/>
-      <castle/>
+      <River/>
+
+      <Abbey/>
+      <Half/>
     </v-expansion-panels>
   </v-tab-item>
 </template>

@@ -6,15 +6,15 @@
         <div class="xlabel" v-if="total">{{total}}</div>
       </v-img>
       {{game.name}}<br>{{game.sub}}
-      <v-spacer/>
     </v-expansion-panel-header>
     <v-expansion-panel-content class="pt-2">
-      <v-subheader v-if="peices.length">Peices</v-subheader>
+      <v-subheader v-if="pieces.length">Pieces</v-subheader>
       <v-row>
-        <v-col v-for="p, i in peices" :key="i"
+        <v-col v-for="p, i in pieces" :key="i"
           class="d-flex child-flex"
           :cols="3" :md="2" :lg="1">
-          <v-img :src="require(`@/assets/${game.path}/${p.image}`)" contain>
+          <v-img :src="require(`@/assets/${game.path}/${p.image}`)" 
+            contain max-height="80px">
             <div class="xlabel">{{p.amount}}</div>
           </v-img>
         </v-col>
@@ -22,18 +22,18 @@
       <v-subheader v-if="meeples.length">Meeples</v-subheader>
       <v-img v-for="m, i in meeples" :key="i"
         :src="require(`@/assets/${game.path}/${m.image}`)"
-        contain class="shrink mr-2">
+        contain class="shrink mr-2" max-height="80px">
         <div class="xlabel">{{m.amount}}</div>
       </v-img>
       <v-subheader v-if="game.tiles">Tiles</v-subheader>
-      <tiles v-if="game.tiles" :path="game.path"
+      <Tiles v-if="game.tiles" :path="game.path"
         :tiles="tiles"/>
     </v-expansion-panel-content>
   </v-expansion-panel>
 </template>
 
 <script>
-import Tiles from '@/components/Tiles.vue'
+import Tiles from '@/components/parts/Tiles.vue'
 
 export default {
   name: 'gameparts',
@@ -45,7 +45,7 @@ export default {
   },
   //data: ()=>({}),
   computed: {
-    peices() {return this.game.peices??[]},
+    pieces() {return this.game.pieces??[]},
     meeples() {return this.game.meeples??[]},
     tiles() {return this.game.tiles??false},
     total() {

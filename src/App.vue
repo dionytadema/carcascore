@@ -19,25 +19,22 @@
       <v-tabs v-model="tab" 
         centered
         show-arrows>
-        <v-tab>Parts</v-tab>
-        <v-tab>Setup</v-tab>
-        <v-tab>Draw Tile</v-tab>
-        <v-tab>Tile</v-tab>
-        <v-tab>Tile Actions</v-tab>
-        <v-tab>Meeple</v-tab>
-        <v-tab>Meeple Actions</v-tab>
-        <v-tab>Score</v-tab>
-        <v-tab>Score Actions</v-tab>
+        <v-tab key="0">Parts</v-tab>
+        <v-tab key="1">Box</v-tab>
+        <v-tab key="2">Setup</v-tab>
+        <v-tab key="3">Tile</v-tab>
+        <v-tab key="4">Meeple</v-tab>
+        <v-tab key="5">Score</v-tab>
+        <v-tab key="6">Action</v-tab>
       </v-tabs>
       <v-tabs-items v-model="tab">
-        <parts/>
-        <setup/>
-        <draw/>
-        <draw/>
-        <draw/>
-        <draw/>
-        <score/>
-        <draw/>
+        <Parts key="0"/>
+        <Box key="1"/>
+        <Setup key="2"/>
+        <Draw key="3"/>
+        <Draw key="4"/>
+        <Score key="5"/>
+        <Score key="6"/>
       </v-tabs-items>
     </v-main>
   </v-app>
@@ -45,6 +42,7 @@
 
 <script>
 import Parts from './components/Parts';
+import Box from './components/Box';
 import Setup from './components/Setup';
 import Draw from './components/Draw';
 import Score from './components/Score';
@@ -53,9 +51,11 @@ export default {
   name: 'App',
   components: {
     Parts,
+    Box,
     Setup,
     Draw,
     Score,
+    //Actions,
   },
   data: ()=>({
     tab: null,
