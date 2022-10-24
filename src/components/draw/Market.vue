@@ -5,7 +5,7 @@
         alt="Kasteel"
         class="shrink mr-2"
         contain
-        :src="require('@/assets/Market/Tile_A.jpg')"
+        :src="require('@/assets/Market/Tile_01.jpg')"
         transition="scale-transition"
         width="40"/>
       Duits Kasteel

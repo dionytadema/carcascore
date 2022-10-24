@@ -4,7 +4,7 @@
       <v-img
         class="shrink mr-2"
         contain
-        :src="require('@/assets/River/Tile_A.jpg')"
+        :src="require('@/assets/River/Tile_01.jpg')"
         transition="scale-transition"
         width="40"/>
       The River

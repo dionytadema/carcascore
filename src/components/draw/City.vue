@@ -4,7 +4,7 @@
       <v-img
         class="shrink mr-2"
         contain
-        :src="require('@/assets/City/Tile_A.jpg')"
+        :src="require('@/assets/City/Tile_01.jpg')"
         width="40"/>
       The city of Carcasonne
     </v-expansion-panel-header>

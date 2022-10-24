@@ -1,11 +1,11 @@
 <template>
   <v-row>
-    <v-col v-for="t, i in names.slice(0, num)" :key="t"
+    <v-col v-for="i in num" :key="i"
       class="d-flex child-flex"
       :cols="size(i)" :md="2" :lg="1">
-      <v-img :src="require(`@/assets/${path}/Tile_${t}.${ext}`)">
+      <v-img :src="require(`@/assets/${path}/Tile_${pad(i)}.${ext}`)">
         <div class="xlabel">{{amount[i]||1}}</div>
-      </v-img>
+      </v-img>  
     </v-col>
   </v-row>
 </template>
@@ -20,15 +20,18 @@ export default {
     path: String,
     tiles: [Object, Boolean],
   },
-  data: ()=>({
-    names: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
-  }),
+  data: ()=>({}),
   computed: {
     ext() {return this.tiles?.ext??'jpg'},
     num() {return this.tiles?.unique??0},
     amount() {return this.tiles?.amount??[]}
   },
   methods: {
+    pad(n) {
+      let num = n.toString()
+      if (num.length < 2) return "0" + num
+      return num
+    },
     size(i) {return 3 * ( (this.tiles?.size?.[i]??this.tiles?.size)-0 || 1)},
   },
   //watch: {},

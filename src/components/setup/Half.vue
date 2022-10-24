@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header>
-      <v-img :src="require('@/assets/Halfling/Tile_A.png')"
+      <v-img :src="require('@/assets/Halfling/Tile_01.png')"
         class="shrink mr-2" transition="scale-transition"
         width="40" contain/>
       Halflings
@@ -23,7 +23,7 @@
           </tbody>
         </template>
       </v-simple-table>
-      During the game players can chose to use a half tile instead of drawing one from the regular stack
+      During the game a player may chose to use a half tile instead of drawing one from the regular stack
     </v-expansion-panel-content>
   </v-expansion-panel>
 </template>

@@ -4,7 +4,7 @@
       <v-img
         class="shrink mr-2"
         contain
-        :src="require('@/assets/Halfling/Tile_A.png')"
+        :src="require('@/assets/Halfling/Tile_01.png')"
         transition="scale-transition"
         width="40"/>
       Halfling

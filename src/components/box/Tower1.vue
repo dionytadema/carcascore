@@ -34,7 +34,7 @@ export default {
       {i:"River", n:10},
       {i:"River2", n:9},
       {i:"River2", n:9},
-      {i:"RiverAE", n:15},
+      {i:"RiverAE", n:14},
       {i:"Inn", n:18},
       {i:"Trader", n:24},
     ],

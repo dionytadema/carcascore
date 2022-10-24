@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header>
-      <v-img :src="require('@/assets/Base/Tile_C.jpg')"
+      <v-img :src="require('@/assets/Base/Tile_03.jpg')"
         class="shrink mr-2" transition="scale-transition"
         width="40" contain/>
       City

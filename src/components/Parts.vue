@@ -107,7 +107,7 @@ export default {
         tiles: {
           total: 18,
           unique: 17,
-          size: {16:2},
+          size: {17:2},
         },
       },
       {name: "River II",
@@ -323,7 +323,24 @@ export default {
         meeples: [
           {image: "Figure_Ringmasters_C2.png", amount: 1},
         ],
-
+      },
+      {name: "Mists over Carcassonne",
+        path: "Mist",
+        tiles: {
+          total: 60,
+          unique: 24,
+          amount: [
+            2, 1, 1, 1,
+            1, 2, 2, 1,
+            1, 1, 3, 1,
+            1, 1, 2, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+          ],
+        },
+        /*meeples: [
+          {image: "Figure_Ringmasters_C2.png", amount: 1},
+        ],*/
       },
     ],
     minor: [
@@ -343,6 +360,12 @@ export default {
       },
       {name: "German Monasteries",
         path: "Monastery",
+        tiles: {
+          unique: 6,
+        },
+      },
+      {name: "Japanese Temples",
+        path: "Temples",
         tiles: {
           unique: 6,
         },
@@ -367,6 +390,12 @@ export default {
           unique: 24,
         },
       },
+      {name: "The Signposts",
+        path: "Signposts",
+        tiles: {
+          unique: 12,
+        },
+      },
       {name: "The Tollkeepers",
         path: "Tollkeeper",
         tiles: {
@@ -379,13 +408,22 @@ export default {
           {image: "Token_Tollkeeper_yellow.png", amount: 1},
           {image: "Token_Tollkeeper_red.png", amount: 1},
           {image: "Token_Tollkeeper_black.png", amount: 1},
-        ]
+        ],
       },
       {name: "The Festival",
         path: "Festival",
         tiles: {
           unique: 10,
         },
+      },
+      {name: "The Bets",
+        path: "Bets",
+        tiles: {
+          unique: 10,
+        },
+        pieces: [
+          {image: "Tokens.png", amount: 36},
+        ]
       },
       {name: "The Markets of Leipzig",
         path: "Market",
@@ -426,6 +464,18 @@ export default {
         tiles: {
           unique: 2,
         },
+      },
+      {name: "Ukraine Promo",
+        path: "Ukraine",
+        tiles: {
+          unique: 1,
+        },
+      },
+      {name: "The Gifts",
+        path: "Gifts",
+        pieces: [
+          {image: "Cards.png", amount: 1},
+        ],
       },
     ]
   }),

@@ -4,7 +4,7 @@
       <v-img
         class="shrink mr-2"
         contain
-        :src="require('@/assets/Abbey/Tile_A.jpg')"
+        :src="require('@/assets/Abbey/Tile_01.jpg')"
         transition="scale-transition"
         width="40"/>
       Abdij
