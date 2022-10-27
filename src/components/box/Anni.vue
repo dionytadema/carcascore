@@ -8,12 +8,11 @@
     <v-expansion-panel-content class="pt-2">
       <div class="anivers">
         <div class="row">
-          <div class="slot"/>
-          <div class="slot"/>
+          <Tileslot :list="top"/>
         </div>
         <div class="row">
-          <div class="slot"/>
-          <div class="slot"/>
+          <Tileslot :list="mid_l"/>
+          <Tileslot :list="mid_r"/>
         </div>
         <div class="row" style="flex:3">
           <div v-for="s, i in list" :key="i"
@@ -33,15 +32,29 @@
 </template>
 
 <script>
+import Tileslot from '@/components/parts/Tileslot.vue'
 
 export default {
   name: 'anni',
-  //components: {},
+  components: {
+    Tileslot,
+  },
   //props: {},
   data: ()=>({
     list: [
       {i:"Anniversary", n:72},
       {i:"Wheel", n:72},
+    ],
+    mid_l: [
+      {i:"Abbey", n:18},
+      {i:"Bridge", n:12},
+    ],
+    mid_r: [
+      {i:"Gifts"},
+      {i:"Bridge"},
+    ],
+    top: [
+      {i:"Bridge"},
     ],
   }),
   //computed: {},

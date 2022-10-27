@@ -45,8 +45,10 @@ export default {
   .slot.small {
     flex: 1;
     margin: 32px 4px; 
-    padding: 64px 6px;
+    padding: 6px 6px;
     border-radius: 24px;
+    display: flex;
+    justify-content: center;
   }
   .stack {
     display: flex;

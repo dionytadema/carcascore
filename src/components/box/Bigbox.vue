@@ -9,16 +9,13 @@
     <v-expansion-panel-content class="pt-2">
       <div class="bigbox">
         <div class="row">
-          <div v-for="s, i in top" :key="i"
+          <div v-for="sub, i in top" :key="i"
             class="slot">
-            <div class="stack" :style="{flexGrow: Math.max(s.n-6,0)}">
-              <v-img :src="require(`@/assets/${icon(s.i)}`)"
+            <div class="stack">
+              <v-img v-for="s, j in sub" :key="j"
+                :src="require(`@/assets/${icon(s.i)}`)"
                 contain max-width="32px">
                 <div class="xlabel">{{s.n}}</div>
-              </v-img>
-              <v-img v-if="i==1" :src="require(`@/assets/${icon('School')}`)"
-                contain max-width="32px">
-                <div class="xlabel">2</div>
               </v-img>
             </div>
           </div>
@@ -58,12 +55,15 @@ export default {
   //props: {},
   data: ()=>({
     top: [
-      {i:"Inn", n:18},
-      {i:"Halfling", n:24},
-      {i:"Trader", n:24},
+      [{i:["Ukraine"], n:1}, {i:["Inn"], n:18}],
+      [{i:["School",], n:2}, {i:["Halfling",], n:24}],
+      [{i:["Trader"], n:24}],
     ],
     mid_l: [
       {i:"Bathhouse", n:6},
+      {i:"Signposts", n:12},
+      {i:"Bets", n:10},
+      {i:"Temples", n:6},
       {i:"Festival", n:10},
     ],
     mid_m: [
